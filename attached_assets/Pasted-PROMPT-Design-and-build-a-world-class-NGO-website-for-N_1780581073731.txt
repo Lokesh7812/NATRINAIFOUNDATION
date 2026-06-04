@@ -1,0 +1,657 @@
+PROMPT
+
+Design and build a world-class NGO website for:
+
+Natrinai Foundation
+
+Tagline:
+"Empowering Youth. Enriching Communities."
+
+Domain:
+natrinaifoundation.org
+
+Organization Type:
+Non-Profit Organization (NGO)
+
+Primary Focus Areas:
+
+Education
+Sports Development
+Rural Development
+Healthcare
+Women Empowerment
+Environmental Conservation
+Water Conservation
+Technology & AI
+Community Development
+DESIGN DIRECTION
+
+Create a premium, modern, international-standard NGO website.
+
+Visual Style:
+
+Clean and professional
+Trust-building
+Emotionally impactful
+NGO + Corporate CSR style
+Apple-level simplicity
+UN Foundation / Gates Foundation quality
+Fully responsive
+Mobile-first design
+Fast loading
+SEO optimized
+Accessibility compliant
+
+Color Palette inspired from logo:
+
+Primary Green: #0D5D42
+Secondary Green: #5AAE3D
+Deep Blue: #123D6A
+Gold Accent: #D79A1E
+White Background
+
+Typography:
+
+Poppins
+Inter
+Montserrat
+
+Use smooth animations.
+
+Use subtle parallax effects.
+
+Use professional micro interactions.
+
+Use modern cards and glassmorphism where appropriate.
+
+WEBSITE STRUCTURE
+HOME PAGE
+
+Hero Section
+
+Large impactful headline:
+
+Building Futures Through Education, Sports, Healthcare & Community Development
+
+Subheadline:
+
+Natrinai Foundation is dedicated to creating sustainable social impact by empowering individuals and communities across India through education, sports, healthcare, environmental initiatives, and rural development.
+
+CTA Buttons:
+
+Donate Now
+Become a Partner
+Explore Projects
+
+Background:
+
+Full-width impact video/image slider showing:
+
+Students
+Football coaching
+Rural development
+Tree planting
+Healthcare services
+IMPACT NUMBERS SECTION
+
+Animated Counter Section
+
+Display:
+
+Students Supported
+Communities Reached
+Sports Athletes Mentored
+Trees Planted
+Rural Families Impacted
+Projects Executed
+
+Counters should animate when scrolling.
+
+ABOUT SECTION
+
+Who We Are
+
+Include:
+
+Vision
+
+Mission
+
+Core Objectives
+
+Beneficiary Information
+
+Timeline:
+
+Community service work started years before becoming formally registered as Natrinai Foundation.
+
+FOCUS AREAS SECTION
+
+Create beautiful interactive cards.
+
+Education
+
+Sports
+
+Healthcare
+
+Women Empowerment
+
+Environment
+
+Rural Development
+
+Technology & AI
+
+Mental Health
+
+Senior Citizen Welfare
+
+Differently Abled Support
+
+Arts & Culture
+
+Wildlife Conservation
+
+Each card should have:
+
+Icon
+Short Description
+Learn More
+FEATURED PROJECTS
+
+Showcase major projects.
+
+Natrinai Community Hospital
+
+Modern healthcare for rural communities.
+
+Genesis Soccer School
+
+Building Puducherry's future through football.
+
+Natrinai 52 Scholars Initiative
+
+One student every week.
+
+Hut to Home Initiative
+
+Transforming huts into homes.
+
+Each project should open a dedicated detailed page.
+
+WHY SUPPORT US
+
+Display:
+
+Transparency
+
+Impact Tracking
+
+Community Ownership
+
+Verified Beneficiaries
+
+Long-Term Sustainability
+
+Professional Governance
+
+DONATION SECTION
+
+Premium donation experience.
+
+Options:
+
+₹500
+₹1000
+₹2500
+₹5000
+Custom Amount
+
+Support Categories:
+
+Education
+Sports
+Hospital Project
+Housing Project
+General Fund
+
+Include:
+
+UPI
+Bank Transfer
+Razorpay Integration Ready
+
+SUCCESS STORIES
+
+Carousel Section
+
+Beneficiary stories
+
+Student transformation
+
+Athlete success
+
+Housing beneficiaries
+
+Community leaders
+
+PARTNERS SECTION
+
+CSR Partners
+
+Educational Institutions
+
+Government Bodies
+
+NGOs
+
+Corporate Sponsors
+
+Partner logos slider.
+
+NEWS & UPDATES
+
+Blog style section.
+
+Latest projects.
+
+Events.
+
+Announcements.
+
+CSR Reports.
+
+VOLUNTEER SECTION
+
+Become a Volunteer
+
+Form Fields:
+
+Name
+
+Email
+
+Phone
+
+Location
+
+Area of Interest
+
+Skills
+
+Message
+
+CONTACT SECTION
+
+Contact Form
+
+Email
+
+Phone
+
+Address
+
+Google Maps
+
+Social Media Links
+
+ABOUT PAGE
+
+Include:
+
+Our Story
+
+Vision
+
+Mission
+
+Objectives
+
+Governance
+
+Trustees
+
+Leadership Team
+
+Transparency Policy
+
+Compliance
+
+12A
+
+80G
+
+FCRA (future)
+
+Annual Reports
+
+PROJECTS PAGE
+
+Project listing with filters.
+
+Categories:
+
+Education
+
+Sports
+
+Healthcare
+
+Rural Development
+
+Environment
+
+Technology
+
+Women Empowerment
+
+Clicking each project opens dedicated page.
+
+PROJECT PAGE TEMPLATE
+
+Hero Banner
+
+Overview
+
+Problem Statement
+
+Solution
+
+Objectives
+
+Impact
+
+Budget
+
+Timeline
+
+Gallery
+
+Donor CTA
+
+Volunteer CTA
+
+Download Proposal PDF
+
+EDUCATION PAGE
+
+Feature:
+
+Natrinai 52 Scholars Initiative
+
+Sections:
+
+Program Overview
+
+Weekly Scholar Model
+
+Mentorship System
+
+Impact Metrics
+
+Transparency Framework
+
+Partnership with Dr. Abdul Kalam Dream Foundation
+
+Student Stories
+
+Support a Scholar CTA
+
+SPORTS PAGE
+
+Feature:
+
+Genesis Soccer School
+
+Include:
+
+Project Vision
+
+Government School Football Program
+
+Elite Athlete Pathway
+
+Coach Development
+
+MERO Trophy
+
+Training Centre
+
+Budget
+
+Expected Outcomes
+
+Gallery
+
+Become a Sponsor CTA
+
+HEALTHCARE PAGE
+
+Feature:
+
+Natrinai Community Hospital
+
+Include:
+
+Problem
+
+Solution
+
+Coverage Villages
+
+Infrastructure
+
+Hospital Layout
+
+Services
+
+Budget
+
+Funding Requirement
+
+Roadmap
+
+Expected Impact
+
+Sponsor a Hospital Bed CTA
+
+Donate CTA
+
+Download Project Report
+
+RURAL DEVELOPMENT PAGE
+
+Feature:
+
+Hut to Home Project
+
+Include:
+
+Current Housing Challenges
+
+Pilot Success Story
+
+25 Home Plan
+
+Beneficiary Selection
+
+Budget Breakdown
+
+Expected Impact
+
+Donate a Home CTA
+
+DONATE PAGE
+
+Professional fundraising page.
+
+Display:
+
+Transparency Metrics
+
+Fund Allocation
+
+Donation Categories
+
+Secure Payment Integration
+
+Impact Calculator
+
+Example:
+
+₹14,00,000 = One Home
+
+₹5,000 = Student Support
+
+₹50,000 = Sports Equipment
+
+₹1,00,000 = Hospital Equipment
+
+VOLUNTEER PAGE
+
+Volunteer Opportunities
+
+Mentor
+
+Coach
+
+Healthcare Support
+
+Field Volunteer
+
+Fundraising
+
+Technology Volunteer
+
+Online Application Form
+
+MEDIA PAGE
+
+Photos
+
+Videos
+
+Events
+
+Press Coverage
+
+Project Gallery
+
+BLOG PAGE
+
+SEO Optimized
+
+Categories:
+
+Education
+
+Sports
+
+Healthcare
+
+Community
+
+Environment
+
+Impact Stories
+
+GOVERNANCE PAGE
+
+Trust Structure
+
+Board of Trustees
+
+Transparency
+
+Annual Reports
+
+Audit Reports
+
+Policies
+
+Compliance
+
+FOOTER
+
+Quick Links
+
+Projects
+
+Donate
+
+Volunteer
+
+Contact
+
+Newsletter Signup
+
+Social Media Icons
+
+Privacy Policy
+
+Terms
+
+Copyright
+
+ADVANCED FEATURES
+
+Implement:
+
+✔ SEO Optimization
+
+✔ Schema Markup
+
+✔ Open Graph
+
+✔ Fast Performance
+
+✔ Lazy Loading
+
+✔ CMS Ready
+
+✔ Dark Mode
+
+✔ Search Functionality
+
+✔ Blog System
+
+✔ Newsletter Integration
+
+✔ Donation System Ready
+
+✔ Multi-language Ready (English + Tamil)
+
+✔ Analytics Integration
+
+✔ Accessibility Compliance
+
+✔ Impact Dashboard
+
+✔ CSR Partner Portal
+
+✔ Annual Report Download Center
+
+✔ Mobile Responsive
+
+✔ Professional Animations
+
+✔ Sticky Navigation
+
+✔ Mega Menu
+
+✔ Back To Top Button
+
+✔ Premium UI/UX
+
+FINAL GOAL
+
+The website should feel like a mix of:
+
+Gates Foundation
+UNICEF
+GiveIndia
+World Vision
+Tata Trusts
+
+while maintaining a unique identity for Natrinai Foundation and creating strong emotional trust, credibility, donor confidence, and community engagement.

@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Natrinai Foundation"
+version = "1.0.0"
+id = "artifacts/natrinai-foundation"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20026
+
+[services.development]
+run = "pnpm --filter @workspace/natrinai-foundation run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/natrinai-foundation", "run", "build" ]
+publicDir = "artifacts/natrinai-foundation/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20026"
+BASE_PATH = "/"
