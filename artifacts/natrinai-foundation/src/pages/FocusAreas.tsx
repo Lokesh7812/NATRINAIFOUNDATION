@@ -177,9 +177,9 @@ export default function FocusAreas() {
         <div className="absolute inset-0 opacity-5"><svg width="100%" height="100%"><defs><pattern id="dpf" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1.5" fill="white"/></pattern></defs><rect width="100%" height="100%" fill="url(#dpf)"/></svg></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Space_Grotesk']">Our Work</span>
-            <h1 className="text-4xl sm:text-5xl font-black text-white mt-3 mb-5 font-['Syne']">All Focus Areas</h1>
-            <p className="text-white/75 text-lg font-['Plus_Jakarta_Sans'] max-w-2xl mx-auto">
+            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Barlow']">Our Work</span>
+            <h1 className="text-4xl sm:text-5xl font-black text-white mt-3 mb-5 font-['Raleway']">All Focus Areas</h1>
+            <p className="text-white/75 text-lg font-['Barlow'] max-w-2xl mx-auto">
               Natrinai Foundation works across 16 domains of human development — addressing every dimension of community well-being with structured programs and measurable impact.
             </p>
           </motion.div>
@@ -203,12 +203,12 @@ export default function FocusAreas() {
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-transform group-hover:scale-110" style={{ backgroundColor: area.color + "15" }}>
                     <area.icon className="w-6 h-6" style={{ color: area.color }} />
                   </div>
-                  <h3 className="font-black text-gray-900 text-base font-['Syne'] leading-snug">{area.label}</h3>
+                  <h3 className="font-black text-gray-900 text-base font-['Raleway'] leading-snug">{area.label}</h3>
                 </div>
-                <p className="text-gray-500 text-sm leading-relaxed font-['Plus_Jakarta_Sans'] mb-5">{area.short}</p>
+                <p className="text-gray-500 text-sm leading-relaxed font-['Barlow'] mb-5">{area.short}</p>
                 <ul className="space-y-2">
                   {area.details.map((detail) => (
-                    <li key={detail} className="flex items-start gap-2 text-xs text-gray-600 font-['Plus_Jakarta_Sans']">
+                    <li key={detail} className="flex items-start gap-2 text-xs text-gray-600 font-['Barlow']">
                       <span className="mt-1 shrink-0" style={{ color: area.color }}>›</span>
                       {detail}
                     </li>
@@ -223,13 +223,13 @@ export default function FocusAreas() {
       {/* CTA */}
       <section className="py-20 bg-[#0D5D42] text-center">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto px-4">
-          <h2 className="text-3xl font-black text-white font-['Syne'] mb-4">Support Any Focus Area</h2>
-          <p className="text-white/70 font-['Plus_Jakarta_Sans'] mb-8">Choose a cause that resonates with you and make a donation today. All contributions are 80G tax deductible.</p>
+          <h2 className="text-3xl font-black text-white font-['Raleway'] mb-4">Support Any Focus Area</h2>
+          <p className="text-white/70 font-['Barlow'] mb-8">Choose a cause that resonates with you and make a donation today. All contributions are 80G tax deductible.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/donate" className="px-8 py-4 bg-[#D79A1E] text-white rounded-full font-bold font-['Syne'] hover:bg-[#c08918] transition-all">
+            <Link href="/donate" className="px-8 py-4 bg-[#D79A1E] text-white rounded-full font-bold font-['Raleway'] hover:bg-[#c08918] transition-all">
               Donate Now
             </Link>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white rounded-full font-semibold font-['Syne'] hover:bg-white/10 transition-all">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white rounded-full font-semibold font-['Raleway'] hover:bg-white/10 transition-all">
               Volunteer <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

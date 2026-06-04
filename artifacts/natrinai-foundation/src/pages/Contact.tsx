@@ -27,8 +27,8 @@ export default function Contact() {
     setVolunteerSent(true);
   }
 
-  const inputCls = "w-full px-4 py-3 border border-gray-200 rounded-xl text-gray-800 text-sm font-['Plus_Jakarta_Sans'] outline-none focus:border-[#0D5D42] focus:ring-1 focus:ring-[#0D5D42]/20 transition-all";
-  const labelCls = "block text-sm font-semibold text-gray-700 font-['Plus_Jakarta_Sans'] mb-1.5";
+  const inputCls = "w-full px-4 py-3 border border-gray-200 rounded-xl text-gray-800 text-sm font-['Barlow'] outline-none focus:border-[#0D5D42] focus:ring-1 focus:ring-[#0D5D42]/20 transition-all";
+  const labelCls = "block text-sm font-semibold text-gray-700 font-['Barlow'] mb-1.5";
 
   return (
     <div className="pt-20 overflow-x-hidden">
@@ -37,9 +37,9 @@ export default function Contact() {
         <div className="absolute inset-0 opacity-5"><svg width="100%" height="100%"><defs><pattern id="dpc" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1.5" fill="white"/></pattern></defs><rect width="100%" height="100%" fill="url(#dpc)"/></svg></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Space_Grotesk']">Reach Out</span>
-            <h1 className="text-4xl sm:text-5xl font-black text-white mt-3 mb-5 font-['Syne']">Contact Us</h1>
-            <p className="text-white/75 text-lg font-['Plus_Jakarta_Sans'] max-w-xl mx-auto">
+            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Barlow']">Reach Out</span>
+            <h1 className="text-4xl sm:text-5xl font-black text-white mt-3 mb-5 font-['Raleway']">Contact Us</h1>
+            <p className="text-white/75 text-lg font-['Barlow'] max-w-xl mx-auto">
               Whether you want to donate, partner, volunteer, or simply learn more — we'd love to hear from you.
             </p>
           </motion.div>
@@ -61,23 +61,23 @@ export default function Contact() {
                     <item.icon className="w-5 h-5 text-[#0D5D42]" />
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900 text-sm font-['Syne'] mb-1">{item.label}</p>
-                    <p className="text-gray-600 text-sm font-['Plus_Jakarta_Sans']">{item.value}</p>
+                    <p className="font-bold text-gray-900 text-sm font-['Raleway'] mb-1">{item.label}</p>
+                    <p className="text-gray-600 text-sm font-['Barlow']">{item.value}</p>
                   </div>
                 </div>
               ))}
 
               <div className="p-6 bg-[#0D5D42] rounded-2xl text-white">
-                <p className="font-bold font-['Syne'] mb-2">CSR Partnerships</p>
-                <p className="text-white/75 text-sm font-['Plus_Jakarta_Sans'] mb-3">Partner with us for your CSR program. We offer custom project alignment, regular reporting, and site visits.</p>
-                <p className="text-[#D79A1E] text-sm font-semibold font-['Space_Grotesk']">csr@natrinaifoundation.org</p>
+                <p className="font-bold font-['Raleway'] mb-2">CSR Partnerships</p>
+                <p className="text-white/75 text-sm font-['Barlow'] mb-3">Partner with us for your CSR program. We offer custom project alignment, regular reporting, and site visits.</p>
+                <p className="text-[#D79A1E] text-sm font-semibold font-['Barlow']">csr@natrinaifoundation.org</p>
               </div>
 
               <div className="p-6 bg-white rounded-2xl border border-gray-100">
-                <p className="font-bold text-gray-900 font-['Syne'] mb-3 text-sm">Follow Us</p>
+                <p className="font-bold text-gray-900 font-['Raleway'] mb-3 text-sm">Follow Us</p>
                 <div className="flex gap-3">
                   {["Facebook", "Twitter", "Instagram", "YouTube", "LinkedIn"].map((s) => (
-                    <a key={s} href="#" className="px-3 py-2 bg-gray-100 hover:bg-[#0D5D42] hover:text-white text-gray-600 rounded-lg text-xs font-semibold font-['Space_Grotesk'] transition-all">
+                    <a key={s} href="#" className="px-3 py-2 bg-gray-100 hover:bg-[#0D5D42] hover:text-white text-gray-600 rounded-lg text-xs font-semibold font-['Barlow'] transition-all">
                       {s.substring(0, 2)}
                     </a>
                   ))}
@@ -90,13 +90,13 @@ export default function Contact() {
           <div className="lg:col-span-2 space-y-7">
             {/* CONTACT FORM */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
-              <h2 className="text-xl font-black text-[#0D5D42] font-['Syne'] mb-6">Send Us a Message</h2>
+              <h2 className="text-xl font-black text-[#0D5D42] font-['Raleway'] mb-6">Send Us a Message</h2>
               {contactSent ? (
                 <div className="flex flex-col items-center py-10 text-center">
                   <CheckCircle className="w-14 h-14 text-[#5AAE3D] mb-4" />
-                  <p className="text-xl font-black text-[#0D5D42] font-['Syne'] mb-2">Message Received!</p>
-                  <p className="text-gray-500 font-['Plus_Jakarta_Sans'] text-sm">We will get back to you within 24–48 hours.</p>
-                  <button onClick={() => setContactSent(false)} className="mt-5 text-[#0D5D42] text-sm font-semibold font-['Plus_Jakarta_Sans'] underline">Send another message</button>
+                  <p className="text-xl font-black text-[#0D5D42] font-['Raleway'] mb-2">Message Received!</p>
+                  <p className="text-gray-500 font-['Barlow'] text-sm">We will get back to you within 24–48 hours.</p>
+                  <button onClick={() => setContactSent(false)} className="mt-5 text-[#0D5D42] text-sm font-semibold font-['Barlow'] underline">Send another message</button>
                 </div>
               ) : (
                 <form onSubmit={handleContact} className="space-y-5">
@@ -124,7 +124,7 @@ export default function Contact() {
                     <label className={labelCls}>Message *</label>
                     <textarea required rows={4} className={inputCls} placeholder="Tell us how you'd like to engage with Natrinai Foundation..." value={contactForm.message} onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })} data-testid="input-contact-message" />
                   </div>
-                  <button type="submit" className="flex items-center gap-2 px-7 py-3.5 bg-[#0D5D42] text-white rounded-xl font-bold font-['Syne'] hover:bg-[#0a4a35] transition-all" data-testid="button-contact-submit">
+                  <button type="submit" className="flex items-center gap-2 px-7 py-3.5 bg-[#0D5D42] text-white rounded-xl font-bold font-['Raleway'] hover:bg-[#0a4a35] transition-all" data-testid="button-contact-submit">
                     <Send className="w-4 h-4" /> Send Message
                   </button>
                 </form>
@@ -133,14 +133,14 @@ export default function Contact() {
 
             {/* VOLUNTEER FORM */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
-              <h2 className="text-xl font-black text-[#0D5D42] font-['Syne'] mb-2">Become a Volunteer</h2>
-              <p className="text-gray-500 text-sm font-['Plus_Jakarta_Sans'] mb-6">Join our volunteer network and contribute your time and skills to our programs.</p>
+              <h2 className="text-xl font-black text-[#0D5D42] font-['Raleway'] mb-2">Become a Volunteer</h2>
+              <p className="text-gray-500 text-sm font-['Barlow'] mb-6">Join our volunteer network and contribute your time and skills to our programs.</p>
               {volunteerSent ? (
                 <div className="flex flex-col items-center py-10 text-center">
                   <CheckCircle className="w-14 h-14 text-[#5AAE3D] mb-4" />
-                  <p className="text-xl font-black text-[#0D5D42] font-['Syne'] mb-2">Thank You for Volunteering!</p>
-                  <p className="text-gray-500 font-['Plus_Jakarta_Sans'] text-sm">Our team will reach out to you within 3–5 working days.</p>
-                  <button onClick={() => setVolunteerSent(false)} className="mt-5 text-[#0D5D42] text-sm font-semibold font-['Plus_Jakarta_Sans'] underline">Submit another application</button>
+                  <p className="text-xl font-black text-[#0D5D42] font-['Raleway'] mb-2">Thank You for Volunteering!</p>
+                  <p className="text-gray-500 font-['Barlow'] text-sm">Our team will reach out to you within 3–5 working days.</p>
+                  <button onClick={() => setVolunteerSent(false)} className="mt-5 text-[#0D5D42] text-sm font-semibold font-['Barlow'] underline">Submit another application</button>
                 </div>
               ) : (
                 <form onSubmit={handleVolunteer} className="space-y-5">
@@ -179,7 +179,7 @@ export default function Contact() {
                     <label className={labelCls}>Message</label>
                     <textarea rows={3} className={inputCls} placeholder="Tell us why you want to volunteer and how you can contribute..." value={volunteerForm.message} onChange={(e) => setVolunteerForm({ ...volunteerForm, message: e.target.value })} data-testid="input-vol-message" />
                   </div>
-                  <button type="submit" className="flex items-center gap-2 px-7 py-3.5 bg-[#5AAE3D] text-white rounded-xl font-bold font-['Syne'] hover:bg-[#4a9633] transition-all" data-testid="button-vol-submit">
+                  <button type="submit" className="flex items-center gap-2 px-7 py-3.5 bg-[#5AAE3D] text-white rounded-xl font-bold font-['Raleway'] hover:bg-[#4a9633] transition-all" data-testid="button-vol-submit">
                     <Send className="w-4 h-4" /> Apply to Volunteer
                   </button>
                 </form>
