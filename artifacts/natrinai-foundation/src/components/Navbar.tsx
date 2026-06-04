@@ -54,10 +54,10 @@ export default function Navbar() {
               className="h-12 w-12 object-contain"
             />
             <div>
-              <p className={`font-bold text-lg leading-tight font-['Poppins'] transition-colors ${scrolled || menuOpen ? "text-[#0D5D42]" : "text-white drop-shadow"}`}>
+              <p className={`font-bold text-lg leading-tight font-['Syne'] transition-colors ${scrolled || menuOpen ? "text-[#0D5D42]" : "text-white drop-shadow"}`}>
                 NATRINAI
               </p>
-              <p className={`text-xs tracking-widest font-['Montserrat'] transition-colors ${scrolled || menuOpen ? "text-[#123D6A]" : "text-white/90 drop-shadow"}`}>
+              <p className={`text-xs tracking-widest font-['Space_Grotesk'] transition-colors ${scrolled || menuOpen ? "text-[#123D6A]" : "text-white/90 drop-shadow"}`}>
                 FOUNDATION
               </p>
             </div>
@@ -69,7 +69,7 @@ export default function Navbar() {
                 <div key={link.label} className="relative">
                   <button
                     onClick={() => setDropdownOpen(!dropdownOpen)}
-                    className={`flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium font-['Inter'] transition-all duration-200 hover:bg-[#0D5D42]/10 ${
+                    className={`flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium font-['Plus_Jakarta_Sans'] transition-all duration-200 hover:bg-[#0D5D42]/10 ${
                       scrolled ? "text-gray-800" : "text-white drop-shadow"
                     }`}
                   >
@@ -82,7 +82,7 @@ export default function Navbar() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0D5D42]/5 hover:text-[#0D5D42] font-['Inter'] transition-colors"
+                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#0D5D42]/5 hover:text-[#0D5D42] font-['Plus_Jakarta_Sans'] transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -94,7 +94,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 rounded-full text-sm font-medium font-['Inter'] transition-all duration-200 hover:bg-[#0D5D42]/10 ${
+                  className={`px-4 py-2 rounded-full text-sm font-medium font-['Plus_Jakarta_Sans'] transition-all duration-200 hover:bg-[#0D5D42]/10 ${
                     location === link.href
                       ? scrolled ? "text-[#0D5D42] font-semibold" : "text-white font-semibold"
                       : scrolled ? "text-gray-700" : "text-white/90 drop-shadow"
@@ -106,7 +106,7 @@ export default function Navbar() {
             )}
             <Link
               href="/donate"
-              className="ml-4 px-6 py-2.5 bg-[#D79A1E] text-white rounded-full text-sm font-semibold font-['Poppins'] hover:bg-[#c08918] transition-all duration-200 shadow-md hover:shadow-lg"
+              className="ml-4 px-6 py-2.5 bg-[#D79A1E] text-white rounded-full text-sm font-semibold font-['Syne'] hover:bg-[#c08918] transition-all duration-200 shadow-md hover:shadow-lg"
             >
               Donate Now
             </Link>
@@ -127,14 +127,14 @@ export default function Navbar() {
           {navLinks.map((link) =>
             link.children ? (
               <div key={link.label}>
-                <p className="px-4 py-3 text-sm font-semibold text-[#0D5D42] font-['Poppins'] uppercase tracking-wide">
+                <p className="px-4 py-3 text-sm font-semibold text-[#0D5D42] font-['Syne'] uppercase tracking-wide">
                   {link.label}
                 </p>
                 {link.children.map((child) => (
                   <Link
                     key={child.href}
                     href={child.href}
-                    className="block px-8 py-2.5 text-sm text-gray-600 hover:text-[#0D5D42] font-['Inter']"
+                    className="block px-8 py-2.5 text-sm text-gray-600 hover:text-[#0D5D42] font-['Plus_Jakarta_Sans']"
                   >
                     {child.label}
                   </Link>
@@ -144,7 +144,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-3 text-sm font-medium text-gray-800 hover:text-[#0D5D42] font-['Inter']"
+                className="block px-4 py-3 text-sm font-medium text-gray-800 hover:text-[#0D5D42] font-['Plus_Jakarta_Sans']"
               >
                 {link.label}
               </Link>
@@ -152,7 +152,7 @@ export default function Navbar() {
           )}
           <Link
             href="/donate"
-            className="mt-4 block text-center px-6 py-3 bg-[#D79A1E] text-white rounded-full text-sm font-semibold font-['Poppins'] hover:bg-[#c08918]"
+            className="mt-4 block text-center px-6 py-3 bg-[#D79A1E] text-white rounded-full text-sm font-semibold font-['Syne'] hover:bg-[#c08918]"
           >
             Donate Now
           </Link>

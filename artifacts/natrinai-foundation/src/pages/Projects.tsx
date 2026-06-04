@@ -111,9 +111,9 @@ export default function Projects() {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Montserrat']">Our Work</span>
-            <h1 className="text-4xl sm:text-5xl font-black text-white mt-3 mb-5 font-['Poppins']">All Projects</h1>
-            <p className="text-white/75 text-lg font-['Inter'] max-w-xl mx-auto">
+            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Space_Grotesk']">Our Work</span>
+            <h1 className="text-4xl sm:text-5xl font-black text-white mt-3 mb-5 font-['Syne']">All Projects</h1>
+            <p className="text-white/75 text-lg font-['Plus_Jakarta_Sans'] max-w-xl mx-auto">
               Explore our programs across healthcare, education, sports, rural development, environment, and more.
             </p>
           </motion.div>
@@ -128,7 +128,7 @@ export default function Projects() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold font-['Montserrat'] transition-all ${
+                className={`px-4 py-2 rounded-full text-sm font-semibold font-['Space_Grotesk'] transition-all ${
                   activeCategory === cat
                     ? "bg-[#0D5D42] text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -158,19 +158,19 @@ export default function Projects() {
                     <div className="h-1.5 w-full" style={{ backgroundColor: proj.color }} />
                     <div className="p-7">
                       <div className="flex items-center justify-between mb-4">
-                        <span className="px-3 py-1 rounded-full text-xs font-semibold font-['Montserrat']" style={{ backgroundColor: proj.color + "15", color: proj.color }}>
+                        <span className="px-3 py-1 rounded-full text-xs font-semibold font-['Space_Grotesk']" style={{ backgroundColor: proj.color + "15", color: proj.color }}>
                           {proj.category}
                         </span>
-                        <span className="px-3 py-1 rounded-full text-xs font-semibold font-['Montserrat'] bg-gray-100" style={{ color: statusColors[proj.status] }}>
+                        <span className="px-3 py-1 rounded-full text-xs font-semibold font-['Space_Grotesk'] bg-gray-100" style={{ color: statusColors[proj.status] }}>
                           {proj.status}
                         </span>
                       </div>
-                      <h3 className="font-black text-gray-900 text-lg mb-2 font-['Poppins'] group-hover:text-[#0D5D42] transition-colors leading-snug">{proj.title}</h3>
-                      <p className="text-xs text-gray-400 mb-3 font-['Inter']">{proj.location}</p>
-                      <p className="text-gray-600 text-sm leading-relaxed font-['Inter'] mb-5">{proj.desc}</p>
+                      <h3 className="font-black text-gray-900 text-lg mb-2 font-['Syne'] group-hover:text-[#0D5D42] transition-colors leading-snug">{proj.title}</h3>
+                      <p className="text-xs text-gray-400 mb-3 font-['Plus_Jakarta_Sans']">{proj.location}</p>
+                      <p className="text-gray-600 text-sm leading-relaxed font-['Plus_Jakarta_Sans'] mb-5">{proj.desc}</p>
                       <div className="flex flex-wrap gap-2 mb-5">
                         {proj.tags.map((tag) => (
-                          <span key={tag} className="px-2 py-1 bg-gray-50 rounded-lg text-xs text-gray-500 font-['Inter']">{tag}</span>
+                          <span key={tag} className="px-2 py-1 bg-gray-50 rounded-lg text-xs text-gray-500 font-['Plus_Jakarta_Sans']">{tag}</span>
                         ))}
                       </div>
                       <div className="flex items-center gap-1 text-sm font-semibold transition-all" style={{ color: proj.color }}>

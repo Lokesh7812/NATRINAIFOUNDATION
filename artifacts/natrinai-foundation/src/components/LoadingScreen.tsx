@@ -89,13 +89,13 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
               >
                 <h1
                   className="text-4xl font-black text-white tracking-wider"
-                  style={{ fontFamily: "'Poppins', sans-serif" }}
+                  style={{ fontFamily: "'Syne', sans-serif" }}
                 >
                   NATRINAI
                 </h1>
                 <p
                   className="text-xs tracking-[0.45em] text-white/60 mt-1"
-                  style={{ fontFamily: "'Montserrat', sans-serif" }}
+                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
                   FOUNDATION
                 </p>
@@ -114,7 +114,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
                 className="text-[#D79A1E] text-sm font-medium"
-                style={{ fontFamily: "'Inter', sans-serif" }}
+                style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
               >
                 Empowering Youth. Enriching Communities.
               </motion.p>
@@ -124,7 +124,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
                 animate={{ opacity: 0.7 }}
                 transition={{ duration: 0.6, delay: 1.5 }}
                 className="text-white/50 text-xs mt-1.5"
-                style={{ fontFamily: "'Inter', sans-serif" }}
+                style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
               >
                 நல் செய், நலம்தர
               </motion.p>

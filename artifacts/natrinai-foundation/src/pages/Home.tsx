@@ -143,7 +143,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <span className="inline-block px-4 py-1.5 bg-[#D79A1E]/20 text-[#D79A1E] rounded-full text-xs font-semibold tracking-widest font-['Montserrat'] mb-6 uppercase">
+            <span className="inline-block px-4 py-1.5 bg-[#D79A1E]/20 text-[#D79A1E] rounded-full text-xs font-semibold tracking-widest font-['Space_Grotesk'] mb-6 uppercase">
               Sports &bull; Education &bull; Environment
             </span>
           </motion.div>
@@ -152,7 +152,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.35 }}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-tight font-['Poppins'] mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-tight font-['Syne'] mb-6"
           >
             Building Futures Through{" "}
             <span className="text-[#5AAE3D]">Education</span>,{" "}
@@ -164,7 +164,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-white/80 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed font-['Inter'] mb-10"
+            className="text-white/80 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed font-['Plus_Jakarta_Sans'] mb-10"
           >
             Natrinai Foundation is dedicated to creating sustainable social impact by empowering
             individuals and communities across India through education, sports, healthcare,
@@ -175,7 +175,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-[#D79A1E] text-base mb-10 font-medium font-['Inter']"
+            className="text-[#D79A1E] text-base mb-10 font-medium font-['Plus_Jakarta_Sans']"
           >
             Empowering Youth. Enriching Communities. &nbsp;|&nbsp; நல் செய், நலம்தர
           </motion.p>
@@ -188,20 +188,20 @@ export default function Home() {
           >
             <Link
               href="/donate"
-              className="px-8 py-4 bg-[#D79A1E] text-white rounded-full font-bold font-['Poppins'] hover:bg-[#c08918] transition-all shadow-lg hover:shadow-xl text-base"
+              className="px-8 py-4 bg-[#D79A1E] text-white rounded-full font-bold font-['Syne'] hover:bg-[#c08918] transition-all shadow-lg hover:shadow-xl text-base"
               data-testid="link-donate-hero"
             >
               Donate Now
             </Link>
             <a
               href="#contact"
-              className="px-8 py-4 bg-white/10 backdrop-blur text-white rounded-full font-semibold font-['Poppins'] hover:bg-white/20 transition-all border border-white/20 text-base"
+              className="px-8 py-4 bg-white/10 backdrop-blur text-white rounded-full font-semibold font-['Syne'] hover:bg-white/20 transition-all border border-white/20 text-base"
             >
               Become a Partner
             </a>
             <Link
               href="/projects"
-              className="px-8 py-4 bg-[#5AAE3D]/20 backdrop-blur text-white rounded-full font-semibold font-['Poppins'] hover:bg-[#5AAE3D]/30 transition-all border border-[#5AAE3D]/30 text-base"
+              className="px-8 py-4 bg-[#5AAE3D]/20 backdrop-blur text-white rounded-full font-semibold font-['Syne'] hover:bg-[#5AAE3D]/30 transition-all border border-[#5AAE3D]/30 text-base"
             >
               Explore Projects
             </Link>
@@ -223,9 +223,9 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-14"
           >
-            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Montserrat']">Our Impact</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Poppins']">5 Years of Tangible Change</h2>
-            <p className="text-gray-500 mt-3 max-w-xl mx-auto font-['Inter']">Every number represents a real life transformed, a community strengthened, a future secured.</p>
+            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Space_Grotesk']">Our Impact</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Syne']">5 Years of Tangible Change</h2>
+            <p className="text-gray-500 mt-3 max-w-xl mx-auto font-['Plus_Jakarta_Sans']">Every number represents a real life transformed, a community strengthened, a future secured.</p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -238,10 +238,10 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="text-center p-6 rounded-2xl bg-gradient-to-b from-gray-50 to-white border border-gray-100 hover:shadow-lg transition-shadow"
               >
-                <p className="text-3xl sm:text-4xl font-black text-[#0D5D42] font-['Poppins']">
+                <p className="text-3xl sm:text-4xl font-black text-[#0D5D42] font-['Syne']">
                   <AnimatedCounter end={stat.end} suffix={stat.suffix} />
                 </p>
-                <p className="text-xs text-gray-500 mt-2 font-['Inter'] leading-tight">{stat.label}</p>
+                <p className="text-xs text-gray-500 mt-2 font-['Plus_Jakarta_Sans'] leading-tight">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -260,17 +260,17 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Montserrat']">Who We Are</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-white mt-3 mb-5 font-['Poppins']">
+            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Space_Grotesk']">Who We Are</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-white mt-3 mb-5 font-['Syne']">
               Rooted in Service,<br/>Driven by Purpose
             </h2>
-            <p className="text-white/80 text-base leading-relaxed font-['Inter'] mb-5">
+            <p className="text-white/80 text-base leading-relaxed font-['Plus_Jakarta_Sans'] mb-5">
               For 5–6 years before becoming a registered trust, our team was already deep in community service — coaching football on government school grounds, enrolling underprivileged students in college, planting trees, and building houses for the rural poor.
             </p>
-            <p className="text-white/80 text-base leading-relaxed font-['Inter'] mb-8">
+            <p className="text-white/80 text-base leading-relaxed font-['Plus_Jakarta_Sans'] mb-8">
               Natrinai Foundation was established to give formal structure, financial transparency, and institutional credibility to what was always a heartfelt mission. Today, with 12A and 80G registration, we operate across education, sports, healthcare, rural development and beyond.
             </p>
-            <Link href="/about" className="inline-flex items-center gap-2 px-7 py-3 bg-[#D79A1E] text-white rounded-full font-semibold font-['Poppins'] hover:bg-[#c08918] transition-all">
+            <Link href="/about" className="inline-flex items-center gap-2 px-7 py-3 bg-[#D79A1E] text-white rounded-full font-semibold font-['Syne'] hover:bg-[#c08918] transition-all">
               Learn Our Story <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
@@ -289,8 +289,8 @@ export default function Home() {
               { label: "Reach", value: "Tamil Nadu, Puducherry and expanding nationally" },
             ].map((item) => (
               <div key={item.label} className="p-5 bg-white/10 backdrop-blur rounded-2xl border border-white/10">
-                <p className="text-[#D79A1E] text-xs font-semibold uppercase tracking-wide font-['Montserrat'] mb-2">{item.label}</p>
-                <p className="text-white text-sm leading-snug font-['Inter']">{item.value}</p>
+                <p className="text-[#D79A1E] text-xs font-semibold uppercase tracking-wide font-['Space_Grotesk'] mb-2">{item.label}</p>
+                <p className="text-white text-sm leading-snug font-['Plus_Jakarta_Sans']">{item.value}</p>
               </div>
             ))}
           </motion.div>
@@ -306,9 +306,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Montserrat']">What We Do</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Poppins']">12 Focus Areas, One Mission</h2>
-            <p className="text-gray-500 mt-3 max-w-xl mx-auto font-['Inter']">A comprehensive approach to human development — addressing every dimension of community well-being.</p>
+            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Space_Grotesk']">What We Do</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Syne']">12 Focus Areas, One Mission</h2>
+            <p className="text-gray-500 mt-3 max-w-xl mx-auto font-['Plus_Jakarta_Sans']">A comprehensive approach to human development — addressing every dimension of community well-being.</p>
           </motion.div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
@@ -327,8 +327,8 @@ export default function Home() {
                 >
                   <area.icon className="w-5 h-5" style={{ color: area.color }} />
                 </div>
-                <h3 className="font-bold text-gray-900 text-sm mb-2 font-['Poppins']">{area.label}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed font-['Inter']">{area.desc}</p>
+                <h3 className="font-bold text-gray-900 text-sm mb-2 font-['Syne']">{area.label}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed font-['Plus_Jakarta_Sans']">{area.desc}</p>
                 <div className="mt-4 flex items-center gap-1 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: area.color }}>
                   Learn more <ArrowRight className="w-3 h-3" />
                 </div>
@@ -337,7 +337,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-10">
-            <Link href="/focus-areas" className="inline-flex items-center gap-2 px-7 py-3 border-2 border-[#0D5D42] text-[#0D5D42] rounded-full font-semibold font-['Poppins'] hover:bg-[#0D5D42] hover:text-white transition-all">
+            <Link href="/focus-areas" className="inline-flex items-center gap-2 px-7 py-3 border-2 border-[#0D5D42] text-[#0D5D42] rounded-full font-semibold font-['Syne'] hover:bg-[#0D5D42] hover:text-white transition-all">
               View All Focus Areas <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -353,9 +353,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Montserrat']">Featured Projects</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Poppins']">Initiatives Creating Real Change</h2>
-            <p className="text-gray-500 mt-3 max-w-xl mx-auto font-['Inter']">From building hospitals to training athletes, each project is engineered for long-term, measurable impact.</p>
+            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Space_Grotesk']">Featured Projects</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Syne']">Initiatives Creating Real Change</h2>
+            <p className="text-gray-500 mt-3 max-w-xl mx-auto font-['Plus_Jakarta_Sans']">From building hospitals to training athletes, each project is engineered for long-term, measurable impact.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
@@ -372,17 +372,17 @@ export default function Home() {
                     <div className="h-3 w-full" style={{ backgroundColor: proj.color }} />
                     <div className="p-8">
                       <span
-                        className="inline-block px-3 py-1 rounded-full text-xs font-semibold font-['Montserrat'] mb-4"
+                        className="inline-block px-3 py-1 rounded-full text-xs font-semibold font-['Space_Grotesk'] mb-4"
                         style={{ backgroundColor: proj.color + "15", color: proj.color }}
                       >
                         {proj.category}
                       </span>
-                      <h3 className="text-xl font-black text-gray-900 mb-3 font-['Poppins'] group-hover:text-[#0D5D42] transition-colors">
+                      <h3 className="text-xl font-black text-gray-900 mb-3 font-['Syne'] group-hover:text-[#0D5D42] transition-colors">
                         {proj.title}
                       </h3>
-                      <p className="text-gray-600 text-sm leading-relaxed font-['Inter'] mb-6">{proj.desc}</p>
+                      <p className="text-gray-600 text-sm leading-relaxed font-['Plus_Jakarta_Sans'] mb-6">{proj.desc}</p>
                       <div className="flex items-center justify-between">
-                        <span className="text-xs text-gray-400 font-['Inter']">Budget: <span className="font-semibold text-gray-600">{proj.budget}</span></span>
+                        <span className="text-xs text-gray-400 font-['Plus_Jakarta_Sans']">Budget: <span className="font-semibold text-gray-600">{proj.budget}</span></span>
                         <span className="flex items-center gap-1 text-sm font-semibold transition-all" style={{ color: proj.color }}>
                           View Project <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </span>
@@ -405,8 +405,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Montserrat']">Why Support Us</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Poppins']">Your Trust Is Our Foundation</h2>
+            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Space_Grotesk']">Why Support Us</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Syne']">Your Trust Is Our Foundation</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
@@ -423,8 +423,8 @@ export default function Home() {
                   <item.icon className="w-5 h-5 text-[#0D5D42]" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 text-sm mb-1.5 font-['Poppins']">{item.label}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed font-['Inter']">{item.desc}</p>
+                  <h3 className="font-bold text-gray-900 text-sm mb-1.5 font-['Syne']">{item.label}</h3>
+                  <p className="text-gray-500 text-xs leading-relaxed font-['Plus_Jakarta_Sans']">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -441,20 +441,20 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-10"
           >
-            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Montserrat']">Make a Difference</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Poppins']">Support Our Mission Today</h2>
-            <p className="text-gray-500 mt-3 font-['Inter']">Your contribution — however big or small — creates a ripple of change that lasts a lifetime.</p>
+            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Space_Grotesk']">Make a Difference</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Syne']">Support Our Mission Today</h2>
+            <p className="text-gray-500 mt-3 font-['Plus_Jakarta_Sans']">Your contribution — however big or small — creates a ripple of change that lasts a lifetime.</p>
           </motion.div>
 
           <div className="bg-gradient-to-br from-[#0D5D42] to-[#123D6A] rounded-3xl p-8 sm:p-10 text-white">
             <div className="mb-6">
-              <p className="text-white/70 text-sm font-['Inter'] mb-3">Select an amount</p>
+              <p className="text-white/70 text-sm font-['Plus_Jakarta_Sans'] mb-3">Select an amount</p>
               <div className="grid grid-cols-4 gap-3">
                 {[500, 1000, 2500, 5000].map((amt) => (
                   <button
                     key={amt}
                     onClick={() => { setDonationAmount(amt); setCustomAmount(""); }}
-                    className={`py-3 rounded-xl font-bold font-['Poppins'] text-sm transition-all ${
+                    className={`py-3 rounded-xl font-bold font-['Syne'] text-sm transition-all ${
                       donationAmount === amt ? "bg-[#D79A1E] text-white" : "bg-white/10 hover:bg-white/20 text-white"
                     }`}
                     data-testid={`button-amount-${amt}`}
@@ -468,19 +468,19 @@ export default function Home() {
                 placeholder="Or enter custom amount (₹)"
                 value={customAmount}
                 onChange={(e) => { setCustomAmount(e.target.value); setDonationAmount("custom"); }}
-                className="mt-3 w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 font-['Inter'] text-sm outline-none focus:border-[#D79A1E]"
+                className="mt-3 w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 font-['Plus_Jakarta_Sans'] text-sm outline-none focus:border-[#D79A1E]"
                 data-testid="input-custom-amount"
               />
             </div>
 
             <div className="mb-6">
-              <p className="text-white/70 text-sm font-['Inter'] mb-3">Donate toward</p>
+              <p className="text-white/70 text-sm font-['Plus_Jakarta_Sans'] mb-3">Donate toward</p>
               <div className="flex flex-wrap gap-2">
                 {["Education", "Sports", "Hospital Project", "Housing Project", "General Fund"].map((cat) => (
                   <button
                     key={cat}
                     onClick={() => setDonationCategory(cat)}
-                    className={`px-4 py-2 rounded-full text-xs font-semibold font-['Montserrat'] transition-all ${
+                    className={`px-4 py-2 rounded-full text-xs font-semibold font-['Space_Grotesk'] transition-all ${
                       donationCategory === cat ? "bg-[#5AAE3D] text-white" : "bg-white/10 hover:bg-white/20 text-white/80"
                     }`}
                     data-testid={`button-category-${cat.toLowerCase().replace(/ /g, "-")}`}
@@ -493,13 +493,13 @@ export default function Home() {
 
             <Link
               href="/donate"
-              className="block w-full text-center py-4 bg-[#D79A1E] hover:bg-[#c08918] rounded-xl font-bold text-white font-['Poppins'] transition-all text-base shadow-lg"
+              className="block w-full text-center py-4 bg-[#D79A1E] hover:bg-[#c08918] rounded-xl font-bold text-white font-['Syne'] transition-all text-base shadow-lg"
               data-testid="link-donate-cta"
             >
               Proceed to Donate — {donationCategory}
             </Link>
 
-            <p className="text-white/40 text-xs text-center mt-4 font-['Inter']">
+            <p className="text-white/40 text-xs text-center mt-4 font-['Plus_Jakarta_Sans']">
               Tax exempt under 80G of the Income Tax Act, 1961
             </p>
           </div>
@@ -515,8 +515,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Montserrat']">Success Stories</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Poppins']">Lives Changed, Futures Built</h2>
+            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Space_Grotesk']">Success Stories</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Syne']">Lives Changed, Futures Built</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
@@ -530,14 +530,14 @@ export default function Home() {
                 className="bg-white rounded-3xl p-7 border border-gray-100 hover:shadow-xl transition-all"
               >
                 <div className="text-[#D79A1E] text-4xl mb-4 font-serif">"</div>
-                <p className="text-gray-700 text-sm leading-relaxed font-['Inter'] italic mb-6">{story.quote}</p>
+                <p className="text-gray-700 text-sm leading-relaxed font-['Plus_Jakarta_Sans'] italic mb-6">{story.quote}</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#0D5D42] to-[#5AAE3D] flex items-center justify-center text-white font-bold text-sm font-['Poppins']">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#0D5D42] to-[#5AAE3D] flex items-center justify-center text-white font-bold text-sm font-['Syne']">
                     {story.name[0]}
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900 text-sm font-['Poppins']">{story.name}</p>
-                    <p className="text-gray-400 text-xs font-['Inter']">{story.role} &bull; {story.location}</p>
+                    <p className="font-bold text-gray-900 text-sm font-['Syne']">{story.name}</p>
+                    <p className="text-gray-400 text-xs font-['Plus_Jakarta_Sans']">{story.role} &bull; {story.location}</p>
                   </div>
                 </div>
               </motion.div>
@@ -549,12 +549,12 @@ export default function Home() {
       {/* PARTNERS */}
       <section className="py-16 bg-white border-y border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-8">
-          <p className="text-center text-gray-400 text-xs font-semibold tracking-widest uppercase font-['Montserrat'] mb-10">
+          <p className="text-center text-gray-400 text-xs font-semibold tracking-widest uppercase font-['Space_Grotesk'] mb-10">
             Partners &amp; Supporters
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8">
             {["CSR Partner", "Educational Institution", "Government Body", "NGO Alliance", "Corporate Sponsor", "Media Partner", "Research Partner", "Healthcare Partner"].map((partner) => (
-              <div key={partner} className="px-6 py-3 bg-gray-50 rounded-xl border border-gray-200 text-gray-400 text-xs font-['Montserrat'] font-semibold tracking-wide hover:border-[#0D5D42]/30 hover:text-[#0D5D42] transition-all cursor-pointer">
+              <div key={partner} className="px-6 py-3 bg-gray-50 rounded-xl border border-gray-200 text-gray-400 text-xs font-['Space_Grotesk'] font-semibold tracking-wide hover:border-[#0D5D42]/30 hover:text-[#0D5D42] transition-all cursor-pointer">
                 {partner}
               </div>
             ))}
@@ -571,8 +571,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Montserrat']">Latest Updates</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Poppins']">News &amp; Announcements</h2>
+            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Space_Grotesk']">Latest Updates</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Syne']">News &amp; Announcements</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
@@ -588,12 +588,12 @@ export default function Home() {
                 <div className="h-2 w-full bg-gradient-to-r from-[#0D5D42] to-[#5AAE3D]" />
                 <div className="p-7">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-[#0D5D42]/10 text-[#0D5D42] rounded-full text-xs font-semibold font-['Montserrat']">{article.category}</span>
-                    <span className="text-gray-400 text-xs font-['Inter']">{article.date}</span>
+                    <span className="px-3 py-1 bg-[#0D5D42]/10 text-[#0D5D42] rounded-full text-xs font-semibold font-['Space_Grotesk']">{article.category}</span>
+                    <span className="text-gray-400 text-xs font-['Plus_Jakarta_Sans']">{article.date}</span>
                   </div>
-                  <h3 className="font-bold text-gray-900 text-base mb-3 font-['Poppins'] group-hover:text-[#0D5D42] transition-colors leading-snug">{article.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed font-['Inter']">{article.desc}</p>
-                  <div className="mt-5 flex items-center gap-1 text-[#0D5D42] text-sm font-semibold font-['Inter'] opacity-0 group-hover:opacity-100 transition-opacity">
+                  <h3 className="font-bold text-gray-900 text-base mb-3 font-['Syne'] group-hover:text-[#0D5D42] transition-colors leading-snug">{article.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed font-['Plus_Jakarta_Sans']">{article.desc}</p>
+                  <div className="mt-5 flex items-center gap-1 text-[#0D5D42] text-sm font-semibold font-['Plus_Jakarta_Sans'] opacity-0 group-hover:opacity-100 transition-opacity">
                     Read more <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
@@ -611,17 +611,17 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-black text-white font-['Poppins'] mb-5">
+            <h2 className="text-3xl sm:text-4xl font-black text-white font-['Syne'] mb-5">
               Join Us in Building a Better India
             </h2>
-            <p className="text-white/75 text-lg font-['Inter'] mb-8 max-w-2xl mx-auto">
+            <p className="text-white/75 text-lg font-['Plus_Jakarta_Sans'] mb-8 max-w-2xl mx-auto">
               Whether you are a donor, CSR partner, volunteer, or simply someone who cares — there is a place for you in the Natrinai family.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/donate" className="px-8 py-4 bg-[#D79A1E] text-white rounded-full font-bold font-['Poppins'] hover:bg-[#c08918] transition-all shadow-lg">
+              <Link href="/donate" className="px-8 py-4 bg-[#D79A1E] text-white rounded-full font-bold font-['Syne'] hover:bg-[#c08918] transition-all shadow-lg">
                 Donate Now
               </Link>
-              <Link href="/contact" className="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-full font-semibold font-['Poppins'] hover:bg-white/20 transition-all">
+              <Link href="/contact" className="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-full font-semibold font-['Syne'] hover:bg-white/20 transition-all">
                 Volunteer With Us
               </Link>
             </div>
