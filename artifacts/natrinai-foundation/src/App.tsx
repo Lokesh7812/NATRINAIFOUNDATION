@@ -1,5 +1,5 @@
-import { useState, useCallback } from "react";
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import { useState, useCallback, useEffect } from "react";
+import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -20,6 +20,14 @@ import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [location]);
+  return null;
+}
+
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
@@ -32,21 +40,24 @@ function Layout({ children }: { children: React.ReactNode }) {
 
 function Router() {
   return (
-    <Layout>
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/projects/hospital" component={Hospital} />
-        <Route path="/projects/genesis-soccer" component={GenesisSoccer} />
-        <Route path="/projects/52-scholars" component={Scholars} />
-        <Route path="/projects/hut-to-home" component={HutToHome} />
-        <Route path="/donate" component={Donate} />
-        <Route path="/focus-areas" component={FocusAreas} />
-        <Route path="/contact" component={Contact} />
-        <Route component={NotFound} />
-      </Switch>
-    </Layout>
+    <>
+      <ScrollToTop />
+      <Layout>
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/projects/hospital" component={Hospital} />
+          <Route path="/projects/genesis-soccer" component={GenesisSoccer} />
+          <Route path="/projects/52-scholars" component={Scholars} />
+          <Route path="/projects/hut-to-home" component={HutToHome} />
+          <Route path="/donate" component={Donate} />
+          <Route path="/focus-areas" component={FocusAreas} />
+          <Route path="/contact" component={Contact} />
+          <Route component={NotFound} />
+        </Switch>
+      </Layout>
+    </>
   );
 }
 

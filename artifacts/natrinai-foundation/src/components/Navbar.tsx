@@ -25,6 +25,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [location] = useLocation();
+  const isHome = location === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -35,14 +36,15 @@ export default function Navbar() {
   useEffect(() => {
     setMenuOpen(false);
     setDropdownOpen(false);
+    setScrolled(window.scrollY > 40);
   }, [location]);
+
+  const transparent = isHome && !scrolled && !menuOpen;
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled || menuOpen
-          ? "bg-white shadow-lg"
-          : "bg-transparent"
+        transparent ? "bg-transparent" : "bg-white shadow-lg"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,10 +56,10 @@ export default function Navbar() {
               className="h-12 w-12 object-contain"
             />
             <div>
-              <p className={`font-bold text-lg leading-tight font-['Raleway'] transition-colors ${scrolled || menuOpen ? "text-[#0D5D42]" : "text-white drop-shadow"}`}>
+              <p className={`font-bold text-lg leading-tight font-['Raleway'] transition-colors ${transparent ? "text-white drop-shadow" : "text-[#0D5D42]"}`}>
                 NATRINAI
               </p>
-              <p className={`text-xs tracking-widest font-['Barlow'] transition-colors ${scrolled || menuOpen ? "text-[#123D6A]" : "text-white/90 drop-shadow"}`}>
+              <p className={`text-xs tracking-widest font-['Barlow'] transition-colors ${transparent ? "text-white/90 drop-shadow" : "text-[#123D6A]"}`}>
                 FOUNDATION
               </p>
             </div>
@@ -70,7 +72,7 @@ export default function Navbar() {
                   <button
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                     className={`flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium font-['Barlow'] transition-all duration-200 hover:bg-[#0D5D42]/10 ${
-                      scrolled ? "text-gray-800" : "text-white drop-shadow"
+                      transparent ? "text-white drop-shadow" : "text-gray-800"
                     }`}
                   >
                     {link.label}
@@ -96,8 +98,12 @@ export default function Navbar() {
                   href={link.href}
                   className={`px-4 py-2 rounded-full text-sm font-medium font-['Barlow'] transition-all duration-200 hover:bg-[#0D5D42]/10 ${
                     location === link.href
-                      ? scrolled ? "text-[#0D5D42] font-semibold" : "text-white font-semibold"
-                      : scrolled ? "text-gray-700" : "text-white/90 drop-shadow"
+                      ? transparent
+                        ? "text-white font-semibold"
+                        : "text-[#0D5D42] font-semibold"
+                      : transparent
+                      ? "text-white/90 drop-shadow"
+                      : "text-gray-700"
                   }`}
                 >
                   {link.label}
@@ -114,7 +120,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors ${scrolled || menuOpen ? "text-gray-800" : "text-white"}`}
+            className={`lg:hidden p-2 rounded-lg transition-colors ${transparent ? "text-white" : "text-gray-800"}`}
             data-testid="button-menu-toggle"
           >
             {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
