@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Home, Users, CheckCircle, ArrowRight, MapPin, Heart } from "lucide-react";
+import { Home, Users, CheckCircle, ArrowRight, MapPin, Heart, Camera } from "lucide-react";
 import AnimatedCounter from "../components/AnimatedCounter";
+import { useState } from "react";
 
 const criteria = [
   "Families living in single-room thatched huts or severely damaged structures",
@@ -27,7 +28,32 @@ const budget = [
   { item: "Plastering & Finishing", cost: "₹20,000" },
 ];
 
+const constructionPhotos = [
+  {
+    src: "/images/construction/WhatsApp Image 2026-06-05 at 2.02.06 PM.jpeg",
+    caption: "Construction in Progress",
+  },
+  {
+    src: "/images/construction/WhatsApp Image 2026-06-05 at 2.02.07 PM.jpeg",
+    caption: "Building the Foundation",
+  },
+  {
+    src: "/images/construction/WhatsApp Image 2026-06-05 at 2.02.07 PM (1).jpeg",
+    caption: "Walls Taking Shape",
+  },
+  {
+    src: "/images/construction/WhatsApp Image 2026-06-05 at 2.02.07 PM (2).jpeg",
+    caption: "Roof Work Underway",
+  },
+  {
+    src: "/images/construction/WhatsApp Image 2026-06-05 at 2.02.07 PM (3).jpeg",
+    caption: "Final Finishing Touches",
+  },
+];
+
 export default function HutToHome() {
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
   return (
     <div className="pt-20 overflow-x-hidden">
       {/* HERO */}
@@ -110,6 +136,130 @@ export default function HutToHome() {
           </motion.div>
         </div>
       </section>
+
+      {/* PHOTO GALLERY */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12 text-center"
+          >
+            <span className="inline-flex items-center gap-2 text-[#5AAE3D] font-semibold text-sm tracking-widest uppercase font-['Barlow']">
+              <Camera className="w-4 h-4" /> On the Ground
+            </span>
+            <h2 className="text-3xl font-black text-[#0D5D42] mt-2 font-['Raleway']">Construction in Action</h2>
+            <p className="text-gray-500 text-sm font-['Barlow'] mt-2 max-w-xl mx-auto">
+              Real photos from our construction sites — every image tells the story of a family's future being built, brick by brick.
+            </p>
+          </motion.div>
+
+          {/* Main large image + 2 side images */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
+            <motion.div
+              className="lg:col-span-2 relative overflow-hidden rounded-2xl cursor-pointer group"
+              initial={{ opacity: 0, scale: 0.97 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              onClick={() => setLightbox(0)}
+            >
+              <img
+                src={constructionPhotos[0].src}
+                alt={constructionPhotos[0].caption}
+                className="w-full h-72 lg:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+                <span className="text-white font-['Barlow'] text-sm font-semibold">{constructionPhotos[0].caption}</span>
+              </div>
+            </motion.div>
+
+            <div className="flex flex-col gap-4">
+              {[1, 2].map((idx) => (
+                <motion.div
+                  key={idx}
+                  className="relative overflow-hidden rounded-2xl cursor-pointer group flex-1"
+                  initial={{ opacity: 0, scale: 0.97 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  onClick={() => setLightbox(idx)}
+                >
+                  <img
+                    src={constructionPhotos[idx].src}
+                    alt={constructionPhotos[idx].caption}
+                    className="w-full h-44 lg:h-[184px] object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span className="text-white font-['Barlow'] text-xs font-semibold">{constructionPhotos[idx].caption}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom row of 2 images */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[3, 4].map((idx) => (
+              <motion.div
+                key={idx}
+                className="relative overflow-hidden rounded-2xl cursor-pointer group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (idx - 3) * 0.12 }}
+                onClick={() => setLightbox(idx)}
+              >
+                <img
+                  src={constructionPhotos[idx].src}
+                  alt={constructionPhotos[idx].caption}
+                  className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+                  <span className="text-white font-['Barlow'] text-sm font-semibold">{constructionPhotos[idx].caption}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LIGHTBOX */}
+      {lightbox !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="relative max-w-4xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={constructionPhotos[lightbox].src}
+              alt={constructionPhotos[lightbox].caption}
+              className="w-full max-h-[80vh] object-contain rounded-xl"
+            />
+            <p className="text-white/80 text-center mt-3 font-['Barlow'] text-sm">
+              {constructionPhotos[lightbox].caption}
+            </p>
+            {/* Prev / Next */}
+            <button
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-white/60 hover:text-white text-3xl font-bold"
+              onClick={() => setLightbox((lightbox - 1 + constructionPhotos.length) % constructionPhotos.length)}
+            >‹</button>
+            <button
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-white/60 hover:text-white text-3xl font-bold"
+              onClick={() => setLightbox((lightbox + 1) % constructionPhotos.length)}
+            >›</button>
+            <button
+              className="absolute -top-10 right-0 text-white/60 hover:text-white text-2xl font-bold"
+              onClick={() => setLightbox(null)}
+            >✕</button>
+          </motion.div>
+        </div>
+      )}
 
       {/* BENEFICIARY CRITERIA */}
       <section className="py-20 bg-white">

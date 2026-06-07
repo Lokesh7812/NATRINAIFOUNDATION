@@ -47,3 +47,33 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Large files, videos, and archives
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.tgz
+
+# Build and temporary outputs
+dist/
+build/
+out/
+.next/
+bin/
+obj/
+temp/
+tmp/
+*.tmp
+*.temp
+.eslintcache
+
+# Local scratch directory
+scratch/
+
+

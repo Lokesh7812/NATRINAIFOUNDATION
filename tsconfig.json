@@ -4,13 +4,13 @@
   "files": [],
   "references": [
     {
-      "path": "./lib/db"
+      "path": "./artifacts/natrinai-foundation"
     },
     {
-      "path": "./lib/api-client-react"
+      "path": "./artifacts/mockup-sandbox"
     },
     {
-      "path": "./lib/api-zod"
+      "path": "./scripts"
     }
   ]
 }
