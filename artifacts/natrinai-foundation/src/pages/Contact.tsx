@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, Instagram } from "lucide-react";
 
 const volunteerAreas = [
   "Education & Tutoring", "Sports Coaching", "Healthcare Support", "Rural Development",
@@ -52,9 +52,9 @@ export default function Contact() {
           <div>
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="space-y-5">
               {[
-                { icon: MapPin, label: "Address", value: "Natrinai Foundation, Puducherry, Tamil Nadu, India — 605 001" },
-                { icon: Mail, label: "Email", value: "info@natrinaifoundation.org" },
-                { icon: Phone, label: "Phone", value: "+91 XXXXX XXXXX" },
+                { icon: MapPin, label: "Address", value: "4/371-B, Ganga Nagar North, Thuraiyur Road, Reddipatti Post, Namakkal – 637002" },
+                { icon: Mail, label: "Email", value: "tharunayyavuperumal@gmail.com" },
+                { icon: Phone, label: "Phone", value: "+91 80567 79617" },
               ].map((item) => (
                 <div key={item.label} className="flex gap-4 p-6 bg-white rounded-2xl border border-gray-100 hover:shadow-md transition-all">
                   <div className="w-10 h-10 rounded-xl bg-[#0D5D42]/10 flex items-center justify-center shrink-0">
@@ -70,18 +70,19 @@ export default function Contact() {
               <div className="p-6 bg-[#0D5D42] rounded-2xl text-white">
                 <p className="font-bold font-['Raleway'] mb-2">CSR Partnerships</p>
                 <p className="text-white/75 text-sm font-['Barlow'] mb-3">Partner with us for your CSR program. We offer custom project alignment, regular reporting, and site visits.</p>
-                <p className="text-[#D79A1E] text-sm font-semibold font-['Barlow']">csr@natrinaifoundation.org</p>
+                <p className="text-[#D79A1E] text-sm font-semibold font-['Barlow']">tharunayyavuperumal@gmail.com</p>
               </div>
 
               <div className="p-6 bg-white rounded-2xl border border-gray-100">
                 <p className="font-bold text-gray-900 font-['Raleway'] mb-3 text-sm">Follow Us</p>
-                <div className="flex gap-3">
-                  {["Facebook", "Twitter", "Instagram", "YouTube", "LinkedIn"].map((s) => (
-                    <a key={s} href="#" className="px-3 py-2 bg-gray-100 hover:bg-[#0D5D42] hover:text-white text-gray-600 rounded-lg text-xs font-semibold font-['Barlow'] transition-all">
-                      {s.substring(0, 2)}
-                    </a>
-                  ))}
-                </div>
+                <a
+                  href="https://www.instagram.com/natrinai_foundation?igsh=MWtyeDQ0Z2Nmc2l3aw%3D%3D&utm_source=qr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white rounded-lg text-sm font-semibold font-['Barlow'] hover:opacity-90 transition-all"
+                >
+                  <Instagram className="w-4 h-4" /> @natrinai_foundation
+                </a>
               </div>
             </motion.div>
           </div>

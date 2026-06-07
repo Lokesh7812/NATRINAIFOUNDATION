@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Shield, BarChart3, CheckCircle, Copy, Smartphone, Building2 } from "lucide-react";
+import { Shield, BarChart3, CheckCircle, Building2 } from "lucide-react";
 
 const impactItems: Record<string, string[]> = {
   Education: ["₹500 buys books for one student for a term", "₹1,000 supports one student for a month", "₹12,000 funds one scholar for the year", "₹50,000 sponsors one scholar for full course"],
@@ -20,16 +20,8 @@ export default function Donate() {
   const [amount, setAmount] = useState<number | "custom">(1000);
   const [customAmount, setCustomAmount] = useState("");
   const [category, setCategory] = useState("General Fund");
-  const [copied, setCopied] = useState(false);
 
   const finalAmount = amount === "custom" ? (parseInt(customAmount) || 0) : amount;
-
-  function copyUPI() {
-    navigator.clipboard.writeText("natrinaifoundation@upi").then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
-  }
 
   return (
     <div className="pt-20 overflow-x-hidden">
@@ -134,58 +126,27 @@ export default function Donate() {
 
               {/* PAYMENT METHODS */}
               <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
-                <h2 className="text-xl font-black text-[#0D5D42] font-['Raleway'] mb-6">Payment Methods</h2>
+                <h2 className="text-xl font-black text-[#0D5D42] font-['Raleway'] mb-6">Bank Transfer / NEFT / RTGS</h2>
 
-                <div className="space-y-5">
-                  {/* UPI */}
-                  <div className="p-6 rounded-2xl bg-[#0D5D42]/5 border border-[#0D5D42]/10">
-                    <div className="flex items-center gap-3 mb-4">
-                      <Smartphone className="w-5 h-5 text-[#0D5D42]" />
-                      <h3 className="font-bold text-[#0D5D42] font-['Raleway']">UPI Payment</h3>
-                    </div>
-                    <div className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-200">
-                      <span className="text-gray-800 text-sm font-mono flex-1">natrinaifoundation@upi</span>
-                      <button
-                        onClick={copyUPI}
-                        className="flex items-center gap-1 px-3 py-1.5 bg-[#0D5D42] text-white rounded-lg text-xs font-semibold font-['Barlow'] hover:bg-[#0a4a35] transition-colors"
-                        data-testid="button-copy-upi"
-                      >
-                        <Copy className="w-3 h-3" />
-                        {copied ? "Copied!" : "Copy"}
-                      </button>
-                    </div>
-                    <p className="text-gray-500 text-xs mt-3 font-['Barlow']">Open any UPI app (GPay, PhonePe, Paytm, BHIM) and send to the above UPI ID.</p>
+                <div className="p-6 rounded-2xl bg-[#123D6A]/5 border border-[#123D6A]/10">
+                  <div className="flex items-center gap-3 mb-5">
+                    <Building2 className="w-5 h-5 text-[#123D6A]" />
+                    <h3 className="font-bold text-[#123D6A] font-['Raleway']">Axis Bank</h3>
                   </div>
-
-                  {/* Bank Transfer */}
-                  <div className="p-6 rounded-2xl bg-[#123D6A]/5 border border-[#123D6A]/10">
-                    <div className="flex items-center gap-3 mb-4">
-                      <Building2 className="w-5 h-5 text-[#123D6A]" />
-                      <h3 className="font-bold text-[#123D6A] font-['Raleway']">Bank Transfer / NEFT / RTGS</h3>
-                    </div>
-                    <div className="space-y-2">
-                      {[
-                        { label: "Account Name", value: "Natrinai Foundation" },
-                        { label: "Account Number", value: "XXXXXXXXXXXX" },
-                        { label: "IFSC Code", value: "XXXXXX0XXXXX" },
-                        { label: "Bank", value: "State Bank of India" },
-                        { label: "Branch", value: "Puducherry Main Branch" },
-                      ].map((row) => (
-                        <div key={row.label} className="flex justify-between text-sm">
-                          <span className="text-gray-500 font-['Barlow']">{row.label}</span>
-                          <span className="font-semibold text-gray-800 font-['Barlow']">{row.value}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <p className="text-gray-500 text-xs mt-3 font-['Barlow']">Please email your transaction receipt to info@natrinaifoundation.org for 80G receipt.</p>
+                  <div className="space-y-3">
+                    {[
+                      { label: "Account Name", value: "Natrinai Foundation and Charitable Trust" },
+                      { label: "Account Number", value: "926020019163717" },
+                      { label: "IFSC Code", value: "UTIB0001715" },
+                      { label: "Bank", value: "Axis Bank" },
+                    ].map((row) => (
+                      <div key={row.label} className="flex justify-between items-center text-sm border-b border-gray-100 pb-2 last:border-0 last:pb-0">
+                        <span className="text-gray-500 font-['Barlow']">{row.label}</span>
+                        <span className="font-semibold text-gray-800 font-['Barlow'] text-right ml-4">{row.value}</span>
+                      </div>
+                    ))}
                   </div>
-
-                  {/* Cheque */}
-                  <div className="p-5 rounded-2xl bg-gray-50 border border-gray-200">
-                    <p className="text-gray-700 text-sm font-['Barlow']">
-                      <span className="font-bold">Cheque / DD:</span> Payable to <span className="font-bold text-[#0D5D42]">"Natrinai Foundation"</span> — mail to our Puducherry office address.
-                    </p>
-                  </div>
+                  <p className="text-gray-500 text-xs mt-4 font-['Barlow']">Please email your transaction receipt to <span className="font-semibold">tharunayyavuperumal@gmail.com</span> for your 80G receipt.</p>
                 </div>
               </div>
             </motion.div>
@@ -248,8 +209,8 @@ export default function Donate() {
               <h3 className="font-black text-[#0D5D42] font-['Raleway'] mb-3">Need Help?</h3>
               <p className="text-gray-600 text-sm font-['Barlow'] mb-4">For large donations, CSR partnerships, or any queries about your contribution:</p>
               <div className="space-y-2 text-sm font-['Barlow']">
-                <p className="text-gray-700"><span className="font-semibold">Email:</span> info@natrinaifoundation.org</p>
-                <p className="text-gray-700"><span className="font-semibold">Phone:</span> +91 XXXXX XXXXX</p>
+                <p className="text-gray-700"><span className="font-semibold">Email:</span> tharunayyavuperumal@gmail.com</p>
+                <p className="text-gray-700"><span className="font-semibold">Phone:</span> +91 80567 79617</p>
               </div>
             </motion.div>
           </div>

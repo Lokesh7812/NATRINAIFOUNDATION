@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -21,15 +21,14 @@ export default function Footer() {
               நல் செய், நலம்தர
             </p>
             <div className="flex gap-3 mt-5">
-              {["fb", "tw", "ig", "yt"].map((s) => (
-                <a
-                  key={s}
-                  href="#"
-                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#D79A1E] flex items-center justify-center transition-colors text-xs font-bold"
-                >
-                  {s === "fb" ? "f" : s === "tw" ? "t" : s === "ig" ? "in" : "yt"}
-                </a>
-              ))}
+              <a
+                href="https://www.instagram.com/natrinai_foundation?igsh=MWtyeDQ0Z2Nmc2l3aw%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white text-xs font-bold font-['Barlow'] hover:opacity-90 transition-opacity"
+              >
+                <Instagram className="w-3.5 h-3.5" /> @natrinai_foundation
+              </a>
             </div>
           </div>
 
@@ -82,17 +81,19 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#5AAE3D] mt-0.5 shrink-0" />
-                <span className="text-white/75 text-sm font-['Barlow']">Natrinai Foundation, Puducherry, Tamil Nadu, India</span>
+                <span className="text-white/75 text-sm font-['Barlow']">4/371-B, Ganga Nagar North, Thuraiyur Road, Reddipatti Post, Namakkal – 637002</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#5AAE3D] shrink-0" />
-                <a href="mailto:info@natrinaifoundation.org" className="text-white/75 hover:text-white text-sm font-['Barlow'] transition-colors">
-                  info@natrinaifoundation.org
+                <a href="mailto:tharunayyavuperumal@gmail.com" className="text-white/75 hover:text-white text-sm font-['Barlow'] transition-colors">
+                  tharunayyavuperumal@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#5AAE3D] shrink-0" />
-                <span className="text-white/75 text-sm font-['Barlow']">+91 XXXXX XXXXX</span>
+                <a href="tel:+918056779617" className="text-white/75 hover:text-white text-sm font-['Barlow'] transition-colors">
+                  +91 80567 79617
+                </a>
               </li>
             </ul>
             <a
