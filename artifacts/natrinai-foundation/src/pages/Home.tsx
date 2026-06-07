@@ -109,9 +109,7 @@ export default function Home() {
   const heroY = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
-  const [donationAmount, setDonationAmount] = useState<number | "custom">(1000);
-  const [customAmount, setCustomAmount] = useState("");
-  const [donationCategory, setDonationCategory] = useState("General Fund");
+
 
   return (
     <div className="overflow-x-hidden">
@@ -432,79 +430,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DONATION CTA */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-10"
-          >
-            <span className="text-[#D79A1E] font-semibold text-sm tracking-widest uppercase font-['Barlow']">Make a Difference</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0D5D42] mt-2 font-['Raleway']">Support Our Mission Today</h2>
-            <p className="text-gray-500 mt-3 font-['Barlow']">Your contribution — however big or small — creates a ripple of change that lasts a lifetime.</p>
-          </motion.div>
 
-          <div className="bg-gradient-to-br from-[#0D5D42] to-[#123D6A] rounded-3xl p-8 sm:p-10 text-white">
-            <div className="mb-6">
-              <p className="text-white/70 text-sm font-['Barlow'] mb-3">Select an amount</p>
-              <div className="grid grid-cols-4 gap-3">
-                {[500, 1000, 2500, 5000].map((amt) => (
-                  <button
-                    key={amt}
-                    onClick={() => { setDonationAmount(amt); setCustomAmount(""); }}
-                    className={`py-3 rounded-xl font-bold font-['Raleway'] text-sm transition-all ${
-                      donationAmount === amt ? "bg-[#D79A1E] text-white" : "bg-white/10 hover:bg-white/20 text-white"
-                    }`}
-                    data-testid={`button-amount-${amt}`}
-                  >
-                    ₹{amt.toLocaleString()}
-                  </button>
-                ))}
-              </div>
-              <input
-                type="number"
-                placeholder="Or enter custom amount (₹)"
-                value={customAmount}
-                onChange={(e) => { setCustomAmount(e.target.value); setDonationAmount("custom"); }}
-                className="mt-3 w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 font-['Barlow'] text-sm outline-none focus:border-[#D79A1E]"
-                data-testid="input-custom-amount"
-              />
-            </div>
-
-            <div className="mb-6">
-              <p className="text-white/70 text-sm font-['Barlow'] mb-3">Donate toward</p>
-              <div className="flex flex-wrap gap-2">
-                {["Education", "Sports", "Hospital Project", "Housing Project", "General Fund"].map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => setDonationCategory(cat)}
-                    className={`px-4 py-2 rounded-full text-xs font-semibold font-['Barlow'] transition-all ${
-                      donationCategory === cat ? "bg-[#5AAE3D] text-white" : "bg-white/10 hover:bg-white/20 text-white/80"
-                    }`}
-                    data-testid={`button-category-${cat.toLowerCase().replace(/ /g, "-")}`}
-                  >
-                    {cat}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <Link
-              href="/donate"
-              className="block w-full text-center py-4 bg-[#D79A1E] hover:bg-[#c08918] rounded-xl font-bold text-white font-['Raleway'] transition-all text-base shadow-lg"
-              data-testid="link-donate-cta"
-            >
-              Proceed to Donate — {donationCategory}
-            </Link>
-
-            <p className="text-white/40 text-xs text-center mt-4 font-['Barlow']">
-              Tax exempt under 80G of the Income Tax Act, 1961
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* SUCCESS STORIES */}
       <section className="py-20 bg-gray-50">

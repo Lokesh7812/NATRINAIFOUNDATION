@@ -1,14 +1,5 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Shield, BarChart3, CheckCircle, Building2 } from "lucide-react";
-
-const impactItems: Record<string, string[]> = {
-  Education: ["₹500 buys books for one student for a term", "₹1,000 supports one student for a month", "₹12,000 funds one scholar for the year", "₹50,000 sponsors one scholar for full course"],
-  Sports: ["₹500 covers training equipment for one athlete", "₹2,500 sponsors one student at MERO Trophy", "₹25,000 sponsors a team for the tournament", "₹1,00,000 sponsors the MERO Trophy event"],
-  "Hospital Project": ["₹1,000 buys medicines for 10 patients", "₹5,000 covers emergency care for one patient", "₹25,000 equips one diagnostic test kit", "₹50,000 sponsors one hospital bed"],
-  "Housing Project": ["₹5,000 buys bricks for a home foundation", "₹25,000 covers roofing for one home", "₹1,00,000 contributes toward a full home", "₹3,50,000 builds one complete home"],
-  "General Fund": ["₹500 supports general operations", "₹1,000 helps reach one more beneficiary", "₹5,000 funds a medical camp for 50 people", "₹25,000 sponsors a community program"],
-};
 
 const allocationData = [
   { label: "Direct Programs & Beneficiaries", pct: 85, color: "#0D5D42" },
@@ -17,12 +8,6 @@ const allocationData = [
 ];
 
 export default function Donate() {
-  const [amount, setAmount] = useState<number | "custom">(1000);
-  const [customAmount, setCustomAmount] = useState("");
-  const [category, setCategory] = useState("General Fund");
-
-  const finalAmount = amount === "custom" ? (parseInt(customAmount) || 0) : amount;
-
   return (
     <div className="pt-20 overflow-x-hidden">
       {/* HERO */}
@@ -63,66 +48,7 @@ export default function Donate() {
           {/* DONATION FORM */}
           <div className="lg:col-span-2">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm mb-7">
-                <h2 className="text-xl font-black text-[#0D5D42] font-['Raleway'] mb-6">Choose Your Contribution</h2>
 
-                <div className="mb-6">
-                  <p className="text-gray-600 text-sm font-['Barlow'] mb-3">Select amount</p>
-                  <div className="grid grid-cols-4 gap-3">
-                    {[500, 1000, 2500, 5000].map((amt) => (
-                      <button
-                        key={amt}
-                        onClick={() => { setAmount(amt); setCustomAmount(""); }}
-                        className={`py-3 rounded-xl font-bold font-['Raleway'] text-sm transition-all ${
-                          amount === amt ? "bg-[#0D5D42] text-white shadow-md" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                        }`}
-                        data-testid={`button-donate-${amt}`}
-                      >
-                        ₹{amt.toLocaleString()}
-                      </button>
-                    ))}
-                  </div>
-                  <input
-                    type="number"
-                    placeholder="Enter custom amount (₹)"
-                    value={customAmount}
-                    onChange={(e) => { setCustomAmount(e.target.value); setAmount("custom"); }}
-                    className="mt-3 w-full px-4 py-3 border border-gray-200 rounded-xl text-gray-800 font-['Barlow'] text-sm outline-none focus:border-[#0D5D42] transition-colors"
-                    data-testid="input-donate-custom"
-                  />
-                </div>
-
-                <div className="mb-6">
-                  <p className="text-gray-600 text-sm font-['Barlow'] mb-3">Donate toward</p>
-                  <div className="flex flex-wrap gap-2">
-                    {Object.keys(impactItems).map((cat) => (
-                      <button
-                        key={cat}
-                        onClick={() => setCategory(cat)}
-                        className={`px-4 py-2 rounded-full text-xs font-semibold font-['Barlow'] transition-all ${
-                          category === cat ? "bg-[#0D5D42] text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                        }`}
-                        data-testid={`button-cat-${cat.toLowerCase().replace(/ /g, "-")}`}
-                      >
-                        {cat}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {finalAmount > 0 && (
-                  <div className="mb-6 p-4 bg-[#0D5D42]/5 rounded-xl border border-[#0D5D42]/10">
-                    <p className="text-[#0D5D42] text-xs font-semibold font-['Barlow'] mb-2">YOUR IMPACT</p>
-                    <ul className="space-y-1">
-                      {impactItems[category].map((item) => (
-                        <li key={item} className="text-gray-600 text-xs font-['Barlow'] flex items-start gap-2">
-                          <span className="text-[#5AAE3D] shrink-0">›</span> {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
 
               {/* PAYMENT METHODS */}
               <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
